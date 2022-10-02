@@ -1,22 +1,16 @@
 package gov.loc.pages;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.time.Duration;
-import java.util.ArrayList;
-import java.util.HashMap;
+
 import java.util.List;
-import java.util.Map;
 
 // page_url = https://www.loc.gov/
 public class HomePage extends BasePage {
@@ -68,22 +62,9 @@ public class HomePage extends BasePage {
         return getCurrentURL();
     }
 
-
-    /**
-     * Go to next featured item in carrousel.
-     * @return paging-info
-     */
-    public HomePage clickNextFeaturedItem(){
-        click(btnNext);
-//        JavascriptExecutor javascriptExecutor = (JavascriptExecutor) driver;
-//        javascriptExecutor.executeScript("arguments[0].click();",
-//                find(divPagingInfo));
-        return this;
-    }
-
     private int currentPage = 1;
 
-    public String getPagingInfo() throws InterruptedException {
+    public String nextPagingInfo() {
         if (currentPage >= 5){
             currentPage = 1;
         }

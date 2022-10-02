@@ -32,8 +32,8 @@ public class HomeTest extends BaseTest{
 
     @Test(priority = 2, description = "Validate the carousel element", retryAnalyzer = Retry.class, groups = {"homepage"})
     @Description("This test validates the carousel item show is 5/5")
-    public void validateCarousel() throws InterruptedException {
-        String pagingInfo = homePage.getPagingInfo();
+    public void validateCarousel() {
+        String pagingInfo = homePage.nextPagingInfo();
         String expectedPaging = "5/5";
         assertEquals(pagingInfo, expectedPaging);
         Log.info("Successfully validated carousel");
