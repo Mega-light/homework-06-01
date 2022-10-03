@@ -13,11 +13,11 @@ public class BaseTest {
     protected SoftAssert softAssert;
 
     @BeforeClass
-    @Parameters({"browserName"})
-    public void setUp(String browserName){
+    @Parameters({"browser"})
+    public void setUp(String browser){
         Log.info("Tests are starting!");
         softAssert = new SoftAssert();
-        driver = DriverFactory.getDriver(browserName);
+        driver = DriverFactory.getDriver(browser);
         driver.manage().window().maximize();
     }
 

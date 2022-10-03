@@ -4,7 +4,7 @@
     <listeners>
         <listener class-name="utils.listeners.TestListener"/>
     </listeners>
-    <test name="Test On Chrome">
+    <test name="Test On Browser">
         <groups>
             <dependencies>
                 <group name="collections" depends-on="homepage">
@@ -12,37 +12,6 @@
                 </group>
             </dependencies>
         </groups>
-        <parameter name="browserName" value="Chrome"/>
-        <classes>
-            <class name="tests.HomeTest"/>
-            <class name="tests.DigitalCollectionsTest"/>
-            <class name="tests.SurveyTest"/>
-        </classes>
-    </test>
-    <test name="Test On Edge">
-        <groups>
-            <dependencies>
-                <group name="collections" depends-on="homepage">
-                    <run/>
-                </group>
-            </dependencies>
-        </groups>
-        <parameter name="browserName" value="Edge"/>
-        <classes>
-            <class name="tests.HomeTest"/>
-            <class name="tests.DigitalCollectionsTest"/>
-            <class name="tests.SurveyTest"/>
-        </classes>
-    </test>
-    <test name="Test On Firefox">
-        <groups>
-            <dependencies>
-                <group name="collections" depends-on="homepage">
-                    <run/>
-                </group>
-            </dependencies>
-        </groups>
-        <parameter name="browserName" value="Firefox"/>
         <classes>
             <class name="tests.HomeTest"/>
             <class name="tests.DigitalCollectionsTest"/>
